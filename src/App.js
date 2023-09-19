@@ -25,6 +25,7 @@ const App = () => {
           <Route path="/skills" component={Skill} /> 
           <Route path="/contact" component={Contact} /> 
 
+
         </Switch>
        
       </div>

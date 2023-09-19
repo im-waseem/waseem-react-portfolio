@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUser, faBriefcase, faCode, faEnvelope, faBook, faNewspaper, faUserTie, faToolbox } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUser, faBriefcase, faCode, faEnvelope, faNewspaper } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -12,9 +12,7 @@ const Navbar = () => {
     setShowComponents(!showComponents);
   };
 
-  const toggleInterviewDropdown = () => {
-    setShowInterviewDropdown(!showInterviewDropdown);
-  };
+
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">

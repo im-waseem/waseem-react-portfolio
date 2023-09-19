@@ -1,67 +1,43 @@
-import React, { useState } from 'react';
-// import './App.css';
+import React from 'react';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import ContactSVG from '../assets/New team members-rafiki.svg'
 
-function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [response, setResponse] = useState('');
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch('http://localhost:3001/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, message }),
-      });
-
-      if (response.status === 200) {
-        setResponse('Email sent successfully');
-      } else {
-        setResponse('Failed to send email');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      setResponse('Failed to send email');
-    }
-  };
-
+const Contact = () => {
   return (
-    <div className="App">
-      <h1>Contact Us</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <label htmlFor="message">Message:</label>
-        <textarea
-          id="message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          required
-        />
-        <button type="submit">Send Email</button>
-      </form>
-      {response && <p>{response}</p>}
-    </div>
+    <Container className="py-5">
+      <Row>
+        <Col lg={6}>
+          <img src={ContactSVG} alt="Contact" className="img-fluid" />
+        </Col>
+        <Col lg={6}>
+          <h2>Contact Us</h2>
+          <p>
+            If you have any questions or inquiries, please fill out the form below, and we will get back to you as soon as possible.
+          </p>
+          <Form>
+            <Form.Group controlId="formName">
+              <Form.Label>Name</Form.Label>
+              <Form.Control type="text" placeholder="Your Name" />
+            </Form.Group>
+
+            <Form.Group controlId="formEmail">
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="email" placeholder="Your Email" />
+            </Form.Group>
+
+            <Form.Group controlId="formMessage">
+              <Form.Label>Message</Form.Label>
+              <Form.Control as="textarea" rows={4} placeholder="Your Message" />
+            </Form.Group>
+
+            <Button style={{margin: "10px"}} variant="primary" type="submit">
+              Submit
+            </Button>
+          </Form>
+        </Col>
+      </Row>
+    </Container>
   );
-}
+};
 
 export default Contact;

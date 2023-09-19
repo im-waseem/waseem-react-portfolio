@@ -16,11 +16,10 @@ const Home2 = () => {
             <Card.Body>
               <div className="d-flex flex-column align-items-center">
                 <p>
-                  I'm a web developer with expertise in various areas including Web Development, Open Source Projects, Frontend, Backend, and UI/UX Design. I'm also the CEO of{' '}
-                  <a href="https://opensecai.com" target="_blank" rel="noopener noreferrer">
-                    opensecai.com
-                  </a>
-                  .
+                  I'm a web developer with expertise in various areas including Web Development, Open Source Projects, Frontend, Backend, and UI/UX Design. 
+                
+                  
+                  
                 </p>
                 <div className="buttonContainer">
                   <Link to="/about" className="custom-button about">
