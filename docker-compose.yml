@@ -1,6 +1,6 @@
 version: "3"
 services:
-  kbtool_v2.1:
+  waseem_web:
     image: darkmechanic/waseem_web
     container_name: waseem_web
     ports:
