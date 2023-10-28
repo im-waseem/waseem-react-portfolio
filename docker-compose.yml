@@ -1,0 +1,8 @@
+version: "3"
+services:
+  kbtool_v2.1:
+    image: darkmechanic/waseem_web
+    container_name: waseem_web
+    ports:
+      - "5000:80"
+    restart: unless-stopped
