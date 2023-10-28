@@ -1,7 +1,7 @@
 version: "3"
 services:
   waseem_web:
-    image: darkmechanic/waseem_web
+    image: darkmechanic/waseem_web:latest
     container_name: waseem_web
     ports:
       - "5000:5000"
