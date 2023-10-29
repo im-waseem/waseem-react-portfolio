@@ -1,14 +1,20 @@
-FROM node:16.17.0-alpine as builder
-WORKDIR /app
-COPY ./package.json .
-COPY ./yarn.lock .
-RUN yarn install
-COPY . .
-RUN yarn build
+# Use an official Node.js runtime as a parent image
+FROM node:21-alpine
 
-FROM nginx:stable-alpine
-WORKDIR /usr/share/nginx/html
-RUN rm -rf ./*
-COPY --from=builder /app/dist .
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
+
+# Install app dependencies
+RUN npm install
+
+# Bundle your app source
+COPY . .
+
+# Expose the port your app will run on
 EXPOSE 80
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+
+# Define the command to run your app
+CMD [ "node", "app.js" ]
