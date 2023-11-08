@@ -1,0 +1,102 @@
+/* MyExperiences.css */
+
+/* Card Container Styles */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Experience Card Styles */
+.experience-card {
+  background-color: #fff; /* Card background color */
+  border: 1px solid #02081a; /* Card border color */
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.experience-card:hover {
+  transform: scale(1.05);
+}
+
+.experience-details {
+  padding-top: 10px;
+}
+
+/* Show Details Button Styles */
+.show-details-button {
+  border-radius: 20px;
+  background-color: #04182e; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.show-details-button:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+
+/* Responsibilities Overlay Styles */
+.responsibilities-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup Content Styles */
+.popup-content {
+  background-color: #050124;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  max-width: 70%;
+  max-height: 60%;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+
+/* Close Button Styles */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsibilities Text Styles */
+.responsibilities-text {
+  margin-top: 20px;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+

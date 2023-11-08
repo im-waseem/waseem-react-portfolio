@@ -1,0 +1,181 @@
+/* Social.css */
+
+/* Container Styles */
+.social-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Heading Styles */
+  .social-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* List Styles */
+  .social-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* List Item Styles */
+  .social-item {
+    font-size: 20px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Anchor Link Styles */
+  .social-item a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit the text color from the parent element */
+  }
+  
+  /* Social Media Icon Styles with Custom Color */
+  .social-item i {
+    font-size: 28px;
+    margin-right: 5px;
+  }
+  
+  /* Twitter Icon Styles */
+  .twitter-icon {
+    color: #1da1f2; /* Twitter blue color */
+  }
+  
+  /* GitHub Icon Styles */
+  .github-icon {
+    color: #333; /* GitHub gray color */
+  }
+  
+  /* LinkedIn Icon Styles */
+  .linkedin-icon {
+    color: #0077b5; /* LinkedIn blue color */
+  }
+  
+  /* Apply animation on hover */
+  .social-item:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Define a CSS animation for the icons */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Apply the animation to the icons on hover */
+  .social-item:hover i {
+    animation: spin 1s linear infinite; /* Spin animation */
+  }
+  /* Social.css */
+
+/* ... (previous styles) */
+
+/* Discord Icon Styles */
+.discord-icon {
+    color: #7289da; /* Discord blue color */
+  }
+  
+  /* Stack Overflow Icon Styles */
+  .stackoverflow-icon {
+    color: #f48024; /* Stack Overflow orange color */
+  }
+  
+  /* Dev.to Icon Styles */
+  .dev-icon {
+    color: #0a0a0a; /* Dev.to black color */
+  }
+  
+  /* WhatsApp Icon Styles */
+  .whatsapp-icon {
+    color: #25d366; /* WhatsApp green color */
+  }
+  
+  /* Gmail Icon Styles */
+  .gmail-icon {
+    color: #d93025; /* Gmail red color */
+  }
+  
+  /* Social.css */
+
+.social-container {
+  text-align: center;
+}
+
+.social-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-item {
+  margin: 10px;
+}
+
+/* Define styles for social icons */
+.twitter-icon,
+.github-icon,
+linkedin-icon,
+whatsapp-icon,
+discord-icon,
+gmail-icon,
+codepen-icon,
+stackoverflow-icon {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+  .social-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-item {
+    margin: 10px 0;
+  }
+
+  /* Adjust icon size for smaller screens */
+  .twitter-icon,
+  .github-icon,
+  .linkedin-icon,
+  .whatsapp-icon,
+  .discord-icon,
+  .gmail-icon,
+  .codepen-icon,
+  .stackoverflow-icon {
+    font-size: 20px;
+  }
+}.popup {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .social-item:hover .popup {
+    display: block;
+    opacity: 1;
+  }
+  
+  .popup p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }

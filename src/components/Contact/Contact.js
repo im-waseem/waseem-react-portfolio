@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import ContactSVG from '../assets/New team members-rafiki.svg'
+import './Contact.css'
 
 const Contact = () => {
   return (

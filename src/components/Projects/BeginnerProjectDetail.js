@@ -5,7 +5,6 @@ import TodoList from './Frontend/TodoList/TodoList';
 import Weather from '../Projects/Frontend/Weather/Weather';
 import Whatsapp from './Frontend/whatsapp/Whatsapp';
 import Employee from './Frontend/TodoList/Employee';
-import CalendarComponent from './Frontend/TodoList/CalendarComponent';
 import LiveLocation from './Frontend/LiveLocation/LiveLocation';
 import Expense from './Frontend/Expenses/Expense';
 import Random from './Frontend/Expenses/Random';
@@ -14,6 +13,7 @@ import Flames from './Frontend/TodoList/Flames';
 import PasswordGenerator from './Frontend/TodoList/PasswordGenerator';
 import CurrencyConverter from './Frontend/TodoList/CurrencyConverter';
 import Quiz from './Frontend/Expenses/Quiz';
+import Game from './Frontend/Game/Game';
 
 
 const projectData = [
@@ -22,8 +22,7 @@ const projectData = [
   { name: 'Weather', component: <Weather /> },
   { name: 'Whatsapp', component: <Whatsapp /> },
   { name: 'Employee', component: <Employee /> },
-  { name: 'CalendarComponent', component: <CalendarComponent /> },
-  { name: 'LiveLocation', component: <LiveLocation /> },
+    { name: 'LiveLocation', component: <LiveLocation /> },
   { name: 'Expense', component: <Expense /> },
   {name: 'Random', component: <Random />},
   {name: 'NoteApp', component: <NoteApp />},
@@ -31,6 +30,7 @@ const projectData = [
   {name: 'PasswordGenerator', component: <PasswordGenerator />},
   {name: 'CurrencyConverter', component: <CurrencyConverter />},
   {name: 'Quiz', component: <Quiz />},
+  {name: 'Game', component: <Game />},
 
   // Add more projects as needed
 ];

@@ -1,36 +1,46 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import LazyLoad from 'react-lazyload'; // Import LazyLoad
 import './HomePage.css';
-import Home2 from './Home2';
 import Pic from '../assets/Home.svg';
+import { FaRocket, FaSmile, FaCode, FaLaptopCode } from 'react-icons/fa';
+import Service from './services';
+
 
 const HomePage = () => {
   const [isNameVisible, setNameVisible] = useState(false);
   const [isAkramVisible, setAkramVisible] = useState(false);
 
   useEffect(() => {
-    // Trigger the animation after a delay
     setTimeout(() => {
       setNameVisible(true);
       setTimeout(() => {
         setAkramVisible(true);
-      }, 400); // Delay before showing "Akram"
-    }, 1000); // Initial delay before showing "Waseem"
+      }, 400);
+    }, 1000);
   }, []);
 
   return (
-   
+    <>
     <div className="homepage-background">
-      <Container className="my-5 homepage-container" style={{ marginTop: '20px' }}>
+      <Container className="my-5 homepage-container water-bubble">
         <Row>
           <Col md={6}>
             <h1 className="homepage-heading">
               {isNameVisible && (
-                <span className="animate-name-waseem">Waseem</span>
+                <span className="animate-name-waseem">
+                  <span role="img" aria-label="Rocket">
+                    <FaRocket />
+                  </span>
+                  Waseem
+                </span>
               )}{' '}
               {isAkramVisible && (
-                <span className="animate-name-akram">Akram</span>
+                <span className="animate-name-akram">
+                  Akram{' '}
+                  <span role="img" aria-label="Smile">
+                    <FaSmile />
+                  </span>
+                </span>
               )}{' '}
             </h1>
             <p className="homepage-text">
@@ -38,7 +48,9 @@ const HomePage = () => {
                 <>
                   I am a Full Stack Web Developer with a passion for creating
                   interactive and user-friendly web applications. I specialize in
-                  frontend and backend technologies, and I love turning ideas into
+                  frontend <span role="img" aria-label="Code">
+                    <FaCode />
+                  </span> and backend technologies, and I love turning ideas into
                   beautiful, functional websites.
                 </>
               )}
@@ -49,7 +61,9 @@ const HomePage = () => {
                 <>
                   My goal is to deliver high-quality, performant, and scalable web
                   solutions. I'm always eager to learn and stay up-to-date with the
-                  latest web development trends.
+                  latest web development trends <span role="img" aria-label="Laptop Code">
+                    <FaLaptopCode />
+                  </span>.
                 </>
               )}
             </p>
@@ -80,12 +94,11 @@ const HomePage = () => {
           </Col>
         </Row>
       </Container>
-
-      {/* Lazy load the Home2 component */}
-      
-        <Home2 />
-      
     </div>
+      <>
+       <Service />
+      </>
+    </>
   );
 };
 

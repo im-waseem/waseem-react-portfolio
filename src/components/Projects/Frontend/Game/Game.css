@@ -1,0 +1,62 @@
+.game-container {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.player-choice {
+  padding: 10px 20px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.name-input input, .name-input button {
+  margin-top: 20px;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.restart-button {
+  padding: 10px 20px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+/* Your existing CSS styles */
+
+.result {
+  margin-top: 20px;
+  transition: opacity 0.3s ease-in-out; /* Add transition for a fade-in effect */
+}
+
+.result.show {
+  opacity: 1;
+}
+
+.restart-button {
+  padding: 10px 20px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* Add transition for a color change effect */
+}
+
+.restart-button:hover {
+  background-color: #005a91; /* Change to a slightly darker shade on hover */
+}

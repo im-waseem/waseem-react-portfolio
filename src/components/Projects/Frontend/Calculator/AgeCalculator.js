@@ -16,7 +16,7 @@ const AgeCalculator = () => {
     const days = ageDate.getUTCDate() - 1;
     const hours = ageDate.getUTCHours();
 
-    const ageString = `${days} days, ${months} months, ${years} years, ${hours} hours`;
+    const ageString = `${years} Years, ${months} months, ${days} days, ${hours} hours`;
 
     setAge(ageString);
   };
