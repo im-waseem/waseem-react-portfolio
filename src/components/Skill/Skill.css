@@ -1,56 +1,122 @@
-.skill-wrapper {
-  text-align: center;
-  padding: 2px;
-  margin: auto;
-}
+/* Skill.css */
 
-.category-buttons {
+.skill-wrapper {
+  max-width: 100%;
+  background: #031425; /* Light background color */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
+  justify-content: space-around;
+  margin: 0 auto; /* Center the content */
+  padding: 20px;
 }
 
-.category-buttons button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
+.category-card {
+  width: calc(50% - 20px); /* Adjust width as needed, considering margin */
+  margin: 10px;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.8); /* Glassy effect background */
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Add a hover effect */
-.category-buttons button:hover {
-  background-color: #0056b3;
+.category-card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.category-title {
+  color: #333;
+  text-align: center;
+  padding: 10px;
+  background: #000a29; /* Blue background color for title */
+  color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .skills-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
-  grid-gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+.skill-card {
+  width: calc(32.33% - 20px); /* Adjust width as needed, considering margin */
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.skill-icon {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.skill-item {
+.skill-icon svg {
+  margin-right: 10px;
+  width: 50px; /* Adjust icon width as needed */
+  height: 50px; /* Adjust icon height as needed */
+}
+
+.skill-name {
   text-align: center;
-  padding: 16px;
-  background-color: #000a27;
-  border-radius: 20px;
-  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
-  color: antiquewhite;
+  font-weight: bold;
 }
-.skill-item:hover{
 
-  background-color: #0056b3;
-
+/* Glassy effect for the whole card */
+.card-glassy {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
 }
-@media (min-width: 768px) {
-  .skills-container {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns on larger screens */
+
+.card-glassy:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+/* Skill.css */
+
+/* ... (previous styles) ... */
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .skill-wrapper {
+    flex-direction: column; /* Stack items vertically on mobile */
+  }
+
+  .category-card,
+  .skill-card {
+    width: 100%; /* Full width for mobile */
+  }
+
+  .skill-card {
+    padding: 10px;
+    display: grid;
+    grid-template-rows: auto auto; /* Adjust grid rows as needed */
+    grid-gap: 5px; /* Adjust grid gap as needed */
+  }
+
+  .skill-icon {
+    /* Adjust styles for skill icons on mobile */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .skill-icon svg {
+    margin-right: 10px;
+    width: 50px; /* Adjust icon width as needed */
+    height: 50px; /* Adjust icon height as needed */
+  }
+
+  .skill-name {
+    /* Adjust styles for skill names on mobile */
+    text-align: center;
+    font-weight: bold;
   }
 }
