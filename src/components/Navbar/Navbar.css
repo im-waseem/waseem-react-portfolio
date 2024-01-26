@@ -1,94 +1,362 @@
-/* Custom styles for the Navbar component */
-.navbar {
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in-out forwards;
-}
-.nav-link:hover {
-  color: #021f6eaf; /* Change color on hover */
-  background-color: #f8f9fa; /* Change background color on hover */
-}
-.nav-nav-item:hover{
-  color: yellow;
+/* Navbar.css */
 
+.Header_menu__item__cb_Hw {
+  transition: background-color 0.3s ease, border-radius 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Use 'ease' for a smooth transition */
+  color: rgb(0, 8, 51);
+  font-weight: bold; /* Adjust font weight as needed */
+  font-family: 'Arial', sans-serif; /* Change the font family as needed */
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.Header_menu__item__cb_Hw:hover {
+  background-color: rgba(1, 2, 24, 0); /* Fully transparent background color */
+  border-radius: 20px; /* Set the border radius on hover as needed */
+  box-shadow: 0 0 10px rgba(11, 0, 49, 0.8), 0 0 20px rgba(180, 172, 172, 0.5);   margin: px;
+  color: rgb(109, 8, 8); /* Set text color to white on hover */
 }
 
-/* Add responsive styles for the Navbar */
-@media (max-width: 768px) {
-  .navbar-collapse {
-    position: absolute;
-    top: 180px;
-    right: 0;
-    left: 0;
-    transform: translateY(-50%);
-    background-color: white;
-    width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    display: none;
-  }
-  .navbar-collapse.show {
-    display: block;
-  }
-  .navbar-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .nav-link {
-    padding: 10px 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    margin-bottom: 5px;
-    transition: color 0.3s; /* Add transition for color change */
-  }
-  .nav-link:hover {
-      color: red; /* Change color on hover */
-      background-color: #f8f9fa; /* Change background color on hover */
-    }
-  
-    /* Add hover effect for active mobile Navbar link */
-    .nav-link.active {
-      color: #007bff;
-      background-color: #f8f9fa;
-    }
+
+
+
+.Header_menu__hover-pill__NFAxL {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  border-radius: 100px;
+  background-color: #ecedf1; /* Set the line color to a slightly different shade */
+  height: 2px; /* Set the height of the line as needed */
+  width: 0;
+  transition: transform 0.3s, width 0.3s;
 }
 
-/* Styles for desktop view */
-@media (min-width: 769px) {
-  .navbar-nav {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-  }
-  .nav-link {
-    margin-right: 20px;
-  }
+.Header_menu__item__cb_Hw:hover .Header_menu__hover-pill__NFAxL {
+  transform: translateX(-50%) scaleX(1);
+  width: 100%;
 }
 
 /* Navbar.css */
-.navbar {
-background-color: #ffffff; /* Light mode background color */
+
+/* Add the following CSS for the Nothing animation */
+
+.Header_face__r0io3 {
+  cursor: pointer;
+  animation: rotateInfinity 2s linear infinite;
 }
 
-.navbar-dark {
-background-color: #333333; /* Dark mode background color */
+.Header_face__r0io3.clicked {
+  animation: none; /* Stop the animation on subsequent clicks */
 }
 
-.nav-link .fa-icon {
-transition: transform 0.2s ease-in-out; /* Icon animation */
+@keyframes rotateInfinity {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-/* Dark mode styles */
-.dark-mode {
-background-color: #333333;
-color: #ffffff;
+/* Rest of your existing styles */
+/* Navbar.css */
+
+/* Original styles (unchanged) */
+
+/* Responsive Styles */
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+  .Header_menu__item__cb_Hw {
+    font-size: 14px;
+  }
+
+  .Header_menu__hover-pill__NFAxL {
+    height: 1px;
+  }
+
+  /* Add more responsive styles as needed */
 }
 
+/* Tablet Styles */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .Header_menu__item__cb_Hw {
+    font-size: 16px;
+  }
+
+  .Header_menu__hover-pill__NFAxL {
+    height: 2px;
+  }
+
+  /* Adjust other styles for tablets */
+}
+
+/* Larger Screens Styles */
+@media only screen and (min-width: 1025px) {
+  .Header_menu__item__cb_Hw {
+    font-size: 18px;
+  }
+
+  .Header_menu__hover-pill__NFAxL {
+    height: 3px;
+  }
+
+  /* Adjust other styles for larger screens */
+}
+
+/* Add the following CSS for the Nothing animation */
+
+.Header_face__r0io3 {
+  cursor: pointer;
+  animation: rotateInfinity 2s linear infinite;
+}
+
+.Header_face__r0io3.clicked {
+  animation: none; /* Stop the animation on subsequent clicks */
+}
+
+@keyframes rotateInfinity {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Rest of your existing styles */
+.Header_header__r9N9Y {
+    background: var(--theme-background);
+    transition: background .4s ease-in-out
+}
+
+.Header_header__inner__nfTZS {
+    height: 5.3125rem;
+    width: 100%;
+    padding-left: var(--container-gutter);
+    padding-right: var(--container-gutter);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 3.75rem;
+    gap: 3.75rem;
+    align-items: center;
+    margin-bottom: 5rem
+}
+
+.Header_header__logo__7Zjhj {
+    color: var(--theme-logo,var(--theme-secondary));
+    z-index: 10;
+    transition: color .4s ease-in-out
+}
+
+.Header_header__face__LVesY {
+    height: 2.5rem
+}
+
+.Header_face__r0io3,.Header_header__face__LVesY {
+    grid-column: 3;
+    color: var(--theme-header-face,var(--theme-secondary));
+    z-index: 10;
+    width: auto;
+    transition: color .4s ease-in-out
+}
+
+.Header_face__r0io3 {
+    position: relative;
+    touch-action: none;
+    width: 50px;
+    height: 50px
+}
+
+.Header_face__r0io3>:first-child {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%)
+}
+
+.Header_menu__Yr6mh {
+    position: relative;
+    z-index: 0;
+    position: fixed;
+    bottom: 1.875rem;
+    z-index: 101;
+    border-radius: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid
+}
+
+.Header_menu__Yr6mh:before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    border-radius: inherit;
+    background: hsla(0, 0%, 100%, 0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: background .15s ease-in-out;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    z-index: -1;
+    animation: Header_replace-bg-after-submenu-close__Ub52C .6s ease-in-out
+}
+
+@keyframes Header_replace-bg-after-submenu-close__Ub52C {
+    0% {
+        background: #fff
+    }
+
+    50% {
+        background: #fff
+    }
+
+    to {
+        background: hsla(0,0%,100%,.7)
+    }
+}
+
+.Header_menu--submenu-open___908m {
+    transition: none
+}
+
+.Header_menu--submenu-open___908m:before {
+    animation: Header_no-bg-when-submenu-open__2GrrC .3s forwards;
+    background: #fff
+}
+
+@keyframes Header_no-bg-when-submenu-open__2GrrC {
+    0% {
+        background: none
+    }
+
+    99% {
+        background: none
+    }
+
+    to {
+        background: #fff
+    }
+}
+
+@media(min-width: 768px) {
+    .Header_menu__Yr6mh {
+        top:1.25rem;
+        bottom: auto
+    }
+}
+
+.Header_menu__list__h_Anx {
+    grid-area: 1/-1;
+    list-style: none;
+    margin: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr;
+    padding: .4375rem;
+    transition: box-shadow .15s;
+    position: relative;
+    border-radius: inherit
+}
+
+@media(max-width: 767px) {
+    .Header_menu__list--submenu-open__7Xt79 {
+        box-shadow:0 -10px 24px 0 rgba(0,0,0,.05)
+    }
+}
+
+.Header_menu__list--twin__w_0Lp {
+    pointer-events: none;
+    order: -1
+}
+
+.Header_menu__link__UGkEv {
+    background: none;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    padding: .5rem .75rem;
+    font-size: .9375rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--theme-secondary);
+    position: relative;
+    transition: color .3s ease;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 2
+}
+
+@media(max-width: 767px) {
+    .Header_menu__link__UGkEv {
+        padding:.5rem .59375rem
+    }
+}
+
+.Header_menu__link__UGkEv:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    top: -.4375rem;
+    bottom: -.4375rem
+}
+
+.Header_menu__item__cb_Hw:first-of-type .Header_menu__link__UGkEv:before {
+    left: -.4375rem
+}
+
+.Header_menu__item__cb_Hw:last-of-type .Header_menu__link__UGkEv:before {
+    right: -.4375rem
+}
+
+.Header_menu__link--twin__3W8NS {
+    pointer-events: none;
+    opacity: 0;
+    grid-row: 1
+}
+
+.Header_menu__link--active__QKyk9 {
+    color: var(--theme-primary)
+}
+
+.Header_menu__active-pill__YdBUl,.Header_menu__hover-pill__NFAxL {
+    grid-row: 1;
+    align-self: stretch;
+    justify-self: stretch;
+    background-color: var(--theme-secondary);
+    border-radius: 100vh;
+    transition: background-color .15s ease,opacity .15s ease;
+    z-index: 1;
+    min-width: 3em
+}
+
+.Header_menu__hover-pill__NFAxL {
+    background-color: var(--theme-secondary);
+    opacity: .05
+}
+
+.Header_skip-link__VZ9J_ {
+    position: fixed;
+    z-index: 9999;
+    color: var(--theme-primary);
+    background-color: var(--theme-secondary);
+    padding: .75em 1em;
+    font-size: 1.25rem
+}
+
+.Header_skip-link__VZ9J_:not(:focus) {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px!important;
+    overflow: hidden;
+    padding: 0;
+    position: absolute!important;
+    width: 1px
+}
